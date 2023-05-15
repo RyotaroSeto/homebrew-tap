@@ -5,20 +5,20 @@
 class Neko < Formula
   desc ""
   homepage ""
-  version "0.5.4"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RyotaroSeto/neko/releases/download/v0.5.4/neko_Darwin_x86_64.tar.gz"
-      sha256 "10f7c8e4809499d40dc13d506c59f0e90928b2df958197b820892ba8cd96a460"
+      url "https://github.com/RyotaroSeto/neko/releases/download/v1.0.0/neko_Darwin_x86_64.tar.gz"
+      sha256 "ec3e13941d43290e02f489fc8128efc22bb60db310e6bb5a5487aca68b30b818"
 
       def install
         bin.install "neko"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RyotaroSeto/neko/releases/download/v0.5.4/neko_Darwin_arm64.tar.gz"
-      sha256 "61221b9843a204de4b5c0a633b2e0fdcff568ef29e537f3811cd5a19b20967c1"
+      url "https://github.com/RyotaroSeto/neko/releases/download/v1.0.0/neko_Darwin_arm64.tar.gz"
+      sha256 "56864d89bd788d055f622f30745addcfee5db379c4399b74a5d8660a3a081c88"
 
       def install
         bin.install "neko"
@@ -27,17 +27,17 @@ class Neko < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/RyotaroSeto/neko/releases/download/v0.5.4/neko_Linux_x86_64.tar.gz"
-      sha256 "970c3697f4058a407b75a506903d480f3bf154232432ac783ba9e3420114c156"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/RyotaroSeto/neko/releases/download/v1.0.0/neko_Linux_arm64.tar.gz"
+      sha256 "1c7b50f14663529c60697d62df474fdb388a0267ecb9d32c4b72d8542f1a0117"
 
       def install
         bin.install "neko"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RyotaroSeto/neko/releases/download/v0.5.4/neko_Linux_arm64.tar.gz"
-      sha256 "ce1916cd5822e38e9c4e73800774f6e3e00dfde8b8026da946161f1dfe5f6692"
+    if Hardware::CPU.intel?
+      url "https://github.com/RyotaroSeto/neko/releases/download/v1.0.0/neko_Linux_x86_64.tar.gz"
+      sha256 "75e021489e882a8a80ba73f0ec963650669e180590cb5d91a575e76c8281bec9"
 
       def install
         bin.install "neko"
