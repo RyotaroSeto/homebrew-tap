@@ -5,20 +5,20 @@
 class Neko < Formula
   desc ""
   homepage ""
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/RyotaroSeto/neko/releases/download/v1.0.0/neko_Darwin_x86_64.tar.gz"
-      sha256 "ec3e13941d43290e02f489fc8128efc22bb60db310e6bb5a5487aca68b30b818"
+    if Hardware::CPU.arm?
+      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.1/neko_Darwin_arm64.tar.gz"
+      sha256 "5aa397765b8d361b825b3e66c51ab051d431dbc30642ce8a4555196f98ab7506"
 
       def install
         bin.install "neko"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/RyotaroSeto/neko/releases/download/v1.0.0/neko_Darwin_arm64.tar.gz"
-      sha256 "56864d89bd788d055f622f30745addcfee5db379c4399b74a5d8660a3a081c88"
+    if Hardware::CPU.intel?
+      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.1/neko_Darwin_x86_64.tar.gz"
+      sha256 "d2828639ff95969f6da66b9efe8ef22f57ccad07711f0c571a74b160b21faa99"
 
       def install
         bin.install "neko"
@@ -28,16 +28,16 @@ class Neko < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RyotaroSeto/neko/releases/download/v1.0.0/neko_Linux_arm64.tar.gz"
-      sha256 "1c7b50f14663529c60697d62df474fdb388a0267ecb9d32c4b72d8542f1a0117"
+      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.1/neko_Linux_arm64.tar.gz"
+      sha256 "57bc9d966946adf8d2ce858a6841dffe9af25494a5bb19df996650604cb82af8"
 
       def install
         bin.install "neko"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RyotaroSeto/neko/releases/download/v1.0.0/neko_Linux_x86_64.tar.gz"
-      sha256 "75e021489e882a8a80ba73f0ec963650669e180590cb5d91a575e76c8281bec9"
+      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.1/neko_Linux_x86_64.tar.gz"
+      sha256 "13038cdae590eeecd690b583be490b195c454f73ffd03fae90299287c81deb05"
 
       def install
         bin.install "neko"
