@@ -5,20 +5,20 @@
 class Neko < Formula
   desc ""
   homepage ""
-  version "1.0.13"
+  version "1.0.14"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.13/neko_Darwin_x86_64.tar.gz"
-      sha256 "d072b29e2f1ff2f178e73216e41bc514964e308310543d13daf37ec4fbde903c"
+    if Hardware::CPU.arm?
+      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.14/neko_Darwin_arm64.tar.gz"
+      sha256 "a250dade35f6cddccbb1608b6c18213970662399c16057e949d8ae45b14f47c8"
 
       def install
         bin.install "neko"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.13/neko_Darwin_arm64.tar.gz"
-      sha256 "8c990831e9138ca223941d0fed95197f27642f6209faf79d194026bc8d859f58"
+    if Hardware::CPU.intel?
+      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.14/neko_Darwin_x86_64.tar.gz"
+      sha256 "11a94daff3a03e3dfc31bace525756e9f4c9e142a21c55cf86a61f99ae0583d8"
 
       def install
         bin.install "neko"
@@ -27,17 +27,17 @@ class Neko < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.13/neko_Linux_x86_64.tar.gz"
-      sha256 "a514fb9b05f491111dd8fee094612db990cf9974088055b8fae78f27079e971a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.14/neko_Linux_arm64.tar.gz"
+      sha256 "bfb1da6d95f9fd78078d6fc5bcd7a885a5872acec2bab02c343b40c8ffd142a6"
 
       def install
         bin.install "neko"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.13/neko_Linux_arm64.tar.gz"
-      sha256 "60a3baf0b8e8ad2e7b99e43297265ab7fd95050982eee57db77ae9439a61b311"
+    if Hardware::CPU.intel?
+      url "https://github.com/RyotaroSeto/neko/releases/download/1.0.14/neko_Linux_x86_64.tar.gz"
+      sha256 "f842df42a43bed23bb31c0b3a7f5a27f9a79579f0e8901c77dd9c4b3e1cf47f7"
 
       def install
         bin.install "neko"
