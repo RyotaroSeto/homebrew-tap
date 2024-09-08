@@ -5,20 +5,20 @@
 class Goup < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/RyotaroSeto/goup/releases/download/v0.2.0/goup_Darwin_x86_64.tar.gz"
-      sha256 "46fbff320e2fddb34538f9861b298136e0d796e51583dae696c9800b0f9bce42"
+      url "https://github.com/RyotaroSeto/goup/releases/download/v0.3.0/goup_Darwin_x86_64.tar.gz"
+      sha256 "e14d63cc9b874ae6946b04af36574ee7770bd9b23c0add7a810423efc6e3b24c"
 
       def install
         bin.install "goup"
       end
     end
     on_arm do
-      url "https://github.com/RyotaroSeto/goup/releases/download/v0.2.0/goup_Darwin_arm64.tar.gz"
-      sha256 "684c090c6d29522144ece365f3b06029d5a58628a52122c34a38e5eba4bcfa0f"
+      url "https://github.com/RyotaroSeto/goup/releases/download/v0.3.0/goup_Darwin_arm64.tar.gz"
+      sha256 "8a0451f07258680b5fb07dc47c5d7e6d530dd10c6f573447fa84e74aa35a878b"
 
       def install
         bin.install "goup"
@@ -29,8 +29,8 @@ class Goup < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/RyotaroSeto/goup/releases/download/v0.2.0/goup_Linux_x86_64.tar.gz"
-        sha256 "a4995492a013a0e6a28e40e970b4aafa2de5354feeb1a83cb5b69f8c8b4c3fdf"
+        url "https://github.com/RyotaroSeto/goup/releases/download/v0.3.0/goup_Linux_x86_64.tar.gz"
+        sha256 "3be7c02712f636a1f897ebeb601a0ad6d552ae41c548aa153ec5ad175a1f9a3c"
 
         def install
           bin.install "goup"
@@ -39,8 +39,8 @@ class Goup < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/RyotaroSeto/goup/releases/download/v0.2.0/goup_Linux_arm64.tar.gz"
-        sha256 "c2290cafb22e49fb72589827ad91990e0ff55238675328e092c80dcab012a501"
+        url "https://github.com/RyotaroSeto/goup/releases/download/v0.3.0/goup_Linux_arm64.tar.gz"
+        sha256 "8753a04477b18a983f319b8ad1f04e0fa1d0013827ffda4366646c923bc2f2b6"
 
         def install
           bin.install "goup"
